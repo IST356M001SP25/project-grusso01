@@ -1,12 +1,15 @@
 # About My Project
 
-Student Name:  name
-Student Email:  email
+Student Name:  Gabrielle Russo
+Student Email:  grusso01@syr.edu
 
 ### What it does
+In my sophomore year of high school, I had an entrepreneurship internship where I had to make a concept that positively benefits the community I live in. I'm from NYC and there's a major recycling issue. There are lower class people that collect recyclables all over the city and bring them to recycling centers to get the money for it. My idea was to create a recycling bin that can detect the type of recyclable you deposited and will give you the funds for it by transfering the money to your bank account or account associated with the company of the recycling bin. This is meant to incentivize the average New Yorker to recycle instead of throwing it in regular trash, making it land at a landfill, and end up getting burned, thus contributing to climate change. I wanted to use this project as an opportunity to analyze just how bad the recycling capture rates really are in the city and understand the gravity of this issue of people not recycling. I did a similar final project for IST256, where I created a map of NYC and each district had either a green, yellow, or red dot to represent how good their capture rates were. Then, when you would hover over the dot, it would show you the paper and MGP (metal, plastic, glass) capture rate for that district. I don't know how to do that with streamlit and honestly, it was very complicated doing that on JupyterNotebook using Seaborn, so I just opted for graphs this time. So, this project analyzes NYC recycling data to evaluate how effective each borough is at capturing recyclable materials over time. Specifically, it calculates capture rates, which is the percentage of total waste that is actually recycled, for each borough by year. The project includes a dashboard that lets users select a borough and view a line chart showing how that borough’s recycling performance has changed over time.
 
 
 ### How you run my project
+To run the project, first execute the three pipeline files in order. Start by running `extract.py`, which loads and cleans the raw dataset. Then run `transform.py` to calculate total waste and capture rate metrics. After that, run `analyze.py` to summarize the data by borough and year. Once the pipeline is complete, launch the dashboard by running `streamlit_app.py`. A sidebar will appear where you can select a borough and view its average capture rate over time. I did create a test for my project using ChatGPT, so you can run `tests/test_transform.py` to confirm the logic with a sample dataset.
 
 
 ### Other things you need to know
+All data files are located in the `cache/` folder. The code that launches the streamlit dashboard IS NOT in the code file, it's on its own, not in any file and it's called `streamlit_app.py`. The project is based on NYC’s Department of Sanitation monthly tonnage reports from NYC Open Data. Here is the link to where I got the dataset: https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5/about_data.
